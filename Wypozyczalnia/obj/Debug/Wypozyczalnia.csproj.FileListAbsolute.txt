@@ -1,0 +1,6 @@
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\bin\Debug\Wypozyczalnia.exe.config
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\bin\Debug\Wypozyczalnia.exe
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\bin\Debug\Wypozyczalnia.pdb
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\obj\Debug\Wypozyczalnia.csprojResolveAssemblyReference.cache
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\obj\Debug\Wypozyczalnia.exe
+c:\users\agrae\documents\visual studio 2015\Projects\Wypozyczalnia\Wypozyczalnia\obj\Debug\Wypozyczalnia.pdb
