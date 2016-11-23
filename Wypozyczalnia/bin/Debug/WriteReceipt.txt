@@ -1,0 +1,9 @@
+2.	Client data: Name: Steve Surname: Jobs card ID: 1SJ	 
+ 
+ Rented movies: 
+	 	 
+Title: Star Wars VII director: J.J. Abrams genre: scifi  length: 135	 	 
+Title: Doctor Strange director: Scott Derrickson genre: adventure  length: 115	 	 
+Title: The Shawshank Redemption director: Frank Darabont genre: drama  length: 132
+	You gain: 34 points
+	Cost of all rentals: 49 PLN

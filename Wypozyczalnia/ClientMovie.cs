@@ -25,9 +25,11 @@ namespace Wypozyczalnia
 
         public void addMovie(Movie movie, uint days)
         {
+            movie.Days = days;
+            movie.addTypeToMovie();
             client_movies.Add(movie);
-            client.Card.Points += client.Card.addPoints(movie.Price, days);
-            client.Card.Counted_cost += (movie.Price + days);
+            client.Card.Points += client.Card.AddPoints(movie, days);
+            client.Card.Counted_cost += (movie.Price);
         }
 
         public Client Client
@@ -52,6 +54,21 @@ namespace Wypozyczalnia
                     Console.WriteLine(movie.ToString());
             }
             else Console.WriteLine("\nNo rented movies.");
+        }
+
+        public override string ToString()
+        {
+            string text = null;
+            text = "Client data: " + client.ToString() + "\r\t \r\n \r\n Rented movies: \r\n";
+            if (client_movies != null)
+            {
+                foreach (Movie movie in client_movies)
+                    text += "\r\t \r\t \r\n" + movie.ToString();
+            }
+            else text += "No rented movies!";
+
+            return text;
+
         }
     }
 }

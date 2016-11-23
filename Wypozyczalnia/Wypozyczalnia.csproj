@@ -46,10 +46,18 @@
     <Compile Include="Client.cs" />
     <Compile Include="ClientCard.cs" />
     <Compile Include="ClientMovie.cs" />
+    <Compile Include="ForKids.cs" />
+    <Compile Include="Genre.cs" />
     <Compile Include="Movie.cs" />
+    <Compile Include="Normal.cs" />
+    <Compile Include="Novelty.cs" />
+    <Compile Include="Print.cs" />
+    <Compile Include="PrintHTML.cs" />
+    <Compile Include="PrintTXT.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rental.cs" />
+    <Compile Include="Western.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -31,5 +31,12 @@ namespace Wypozyczalnia
         {
             Console.Write(name + " " + surname + " " + card.ID);
         }
+
+        public override string ToString()
+        {
+            return "Name: " + name + " Surname: " + surname +
+                   " card ID: " + card.ID.ToString();
+        }
+
     }
 }

@@ -19,14 +19,8 @@ namespace Wypozyczalnia
             fantasy,
             scifi,
             action_film,
-            drama
-        }
-
-        public enum TYPE
-        {
-            normal = 10,
-            kids = 5,
-            novelty = 15
+            drama,
+            Western
         }
 
         public Movie(string title, string director, GENRE[] genre, uint length, uint release_year)
@@ -36,7 +30,6 @@ namespace Wypozyczalnia
             this.genre = genre;
             this.length = length;
             this.release_year = release_year;
-            addTypeToMovie(this);
             movie_id = counter.ToString();
             counter++;
         }
@@ -50,6 +43,19 @@ namespace Wypozyczalnia
         private uint length;
         private uint price;
         private uint release_year;
+        private uint days;
+        private Genre genre_class;
+
+        public Genre getGenre
+        {
+            get { return genre_class; }
+        }
+
+        public uint Days
+        {
+            set { days = value; }
+            get { return days; }
+        }
 
         public string Title { get { return title; } }
         public string Director { get { return director; } }
@@ -67,15 +73,23 @@ namespace Wypozyczalnia
             return movie_genre;
         }
 
-        public void addTypeToMovie(Movie movie)
+        public void addTypeToMovie()
         {
-            for (int i = 0; i < movie.genre.Length; i++)
-                if (movie.genre[i] == GENRE.for_kids)
-                    movie.price = (int)TYPE.kids;
-                else if (movie.release_year == 2016)
-                    movie.price = (int)TYPE.novelty;
+            DateTime currentYear = DateTime.Today;
+            for (int i = 0; i < genre.Length; i++)
+            {
+                if (release_year == currentYear.Year)
+                    genre_class = new Novelty();
+                else if (genre[i] == GENRE.for_kids)
+                    genre_class = new ForKids();
+                else if (genre[i] == GENRE.Western)
+                    genre_class = new Western();
                 else
-                    movie.price = (int)TYPE.normal;
+                    genre_class = new Normal();
+            }
+
+            genre_class.CountCost(days);
+            price = genre_class.PRICE_A_DAY;
 
         }
 

@@ -15,6 +15,7 @@ namespace Wypozyczalnia
             addMovieToRent("The Shawshank Redemption", "Frank Darabont", new Movie.GENRE[] { Movie.GENRE.drama}, 132, 1994);
         }
 
+        private Print print;
         private List<ClientMovie> client_movie = new List<ClientMovie>();
         private Dictionary<Movie, bool> movies_in_rental = new Dictionary<Movie, bool>();
 
@@ -116,6 +117,11 @@ namespace Wypozyczalnia
 
         public void display(Client client)
         {
+            print = new PrintTXT();
+            print.printConfirmation(client, client_movie);
+            print = new PrintHTML();
+            print.printConfirmation(client, client_movie);
+
             foreach (ClientMovie RentalInfo in client_movie)
                 if (RentalInfo.Client.Card.ID == client.Card.ID)
                 {

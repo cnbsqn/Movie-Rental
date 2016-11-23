@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//KUBA PYLA GRUPA 33 113995 INFORMATYKA 5 SEM
+
 namespace Wypozyczalnia
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Client client = new Client(new ClientCard(), "Jakub", "Pyla");
-            Client client1 = new Client(new ClientCard(), "Marcin", "Uryga");
-            Client client2 = new Client(new ClientCard(), "Michal", "Sroka");
+            Client client = new Client(new ClientCard(), "John", "Smith");
+            Client client1 = new Client(new ClientCard(), "Steve", "Jobs");
+            Client client2 = new Client(new ClientCard(), "Mark", "Zuckerberg");
 
             Rental ren = new Rental();
 

@@ -32,16 +32,11 @@ namespace Wypozyczalnia
             set { id = value; }
         }
 
-        public uint addPoints(uint movie_price, uint days)
+        public uint AddPoints(Movie movie, uint days)
         {
             uint points = 0;
-            if (movie_price == (int)Movie.TYPE.normal)
-                points += days;
-            else if (movie_price == (int)Movie.TYPE.novelty)
-                points += 2 * days;
-            else
-                points = 0;
-
+            movie.getGenre.CountPoints(days);
+            points = movie.getGenre.Points;
             return points;
         }
     }
